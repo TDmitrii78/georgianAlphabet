@@ -48,6 +48,10 @@
         border-radius: 1.5vw;
         box-shadow: 0.5vw 0.5vw 0.5vw black;
         border: 0.5vw solid blue;
+        display: flex; flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+        gap: 1vw
     }
     .item3 {
         grid-area: main2;
@@ -81,9 +85,20 @@
         
     }
     .keyboard {
-        width: 10vw;
-        height: 1.5vw;
+        width: 9vw;
+        height: 2vw;
         font-size: 1vw;
+    }
+    #stop {
+        background-color: red;
+        width: 27vw;
+        height: 2vw;
+        font-size: 1vw;
+    }
+    #btn1 {
+        background-color: green; 
+        border-radius: 0.5vw; 
+        width: 50%; height: 3vw;
     }
 }
 
@@ -94,21 +109,21 @@
         font-family: 'Roboto', sans-serif;
     }
     p {
-        font-size: 1.17vw;
+        font-size: 3vw;
     }
     h1 {
-        font-size: 2vw;
+        font-size: 4vw;
     }
     h2 {
-        font-size: 1.7vw;
+        font-size: 3.5vw;
     }
     h4 {
-        font-size: 1.17vw;
+        font-size: 2.5vw;
     }
     .greedContainer {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 10vw 30vw 70vw 40vw 5vw; 
+        grid-template-rows: 13vw 15vw 70vw 80vw 5vw; 
         grid-template-areas:
             "header"
             "main1" 
@@ -132,6 +147,10 @@
         border-radius: 1.5vw;
         box-shadow: 0.5vw 0.5vw 0.5vw black;
         border: 0.5vw solid blue;
+        display: flex; flex-direction: row; 
+        align-items: center; 
+        justify-content: center; 
+        gap: 1vw
     }
     .item3 {
         grid-area: main2;
@@ -165,8 +184,20 @@
         
     }
     .keyboard {
-        width: 10vw;
-        height: 10vw;
-        font-size: 1vw;
+        width: 21vw;
+        height: 8vw;
+        font-size: 3vw;
     }
+    #stop {
+        background-color: red;
+        width: 68vw;
+        height: 8vw;
+        font-size: 3vw;
+    }
+    #btn1 {
+        background-color: green; 
+        border-radius: 0.5vw; 
+        width: 50%; height: 10vw;
+    }
+    
 }

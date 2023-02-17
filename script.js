@@ -234,7 +234,7 @@ const keyboard =`<div id="allKey"; style="display: flex; flex-wrap: wrap; justif
 <button id="b31"; class="keyboard"><b>У</b></button>
 <button id="b32"; class="keyboard"><b>В</b></button>
 <button id="b33"; class="keyboard"><b>З</b></button>
-<button id="stop"; class="keyboard" style="background-color: red";><b>Выход.</b></button>
+<button id="stop"><b>Выход.</b></button>
 </div>`;
 
 const oneWindow = document.querySelectorAll("#window1")[0];
@@ -258,7 +258,7 @@ function randomLetter() {
 function updateWindowOne() {
     oneWindow.innerHTML = `<h2>Ваш результат.</h2> <p>Всего: ${numAll}</p> <p>Верно: ${numTrue}</p>
                             <p>Неверно: ${numFalse}</p> <p>Результат: ${numRes}%</p>`;
-    oneWindow.style.cssText = "display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1vw";
+   
 }
 
 function updateWindowTwo() {
@@ -275,7 +275,7 @@ function update2WindowThree() {
 
 function updateWindowThree() {
     threeWindow.innerHTML = `<h2>Для начала нажмите старт.</h2> 
-                        <button id="btn1"; style='background-color: green; border-radius: 0.5vw; width: 50%; height: 3vw;'><p>Start.</p></button> 
+                        <button id="btn1"><p>Start.</p></button> 
                         <p>Для грузинской буквы выбираем русскую транскрипцию.</p>`;
     threeWindow.style.cssText = "display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1vw";
 }
