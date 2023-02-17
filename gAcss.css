@@ -8,6 +8,18 @@ body {
     background-color: silver;
     font-family: 'Roboto', sans-serif;
 }
+p {
+    font-size: 1.17vw;
+}
+h1 {
+    font-size: 2vw;
+}
+h2 {
+    font-size: 1.7vw;
+}
+h4 {
+    font-size: 1.17vw;
+}
 .greedContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

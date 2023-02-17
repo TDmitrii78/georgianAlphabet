@@ -1,5 +1,5 @@
 'use strict';
-let arrAlphabet = [
+const arrAlphabet = [
     {
         num: 1,
         picSrc: "pictures/a.jpg",
@@ -262,20 +262,20 @@ function updateWindowOne() {
 }
 
 function updateWindowTwo() {
-twoWindow.innerHTML = `<button id="help">Подсказка</button><img src=${srcPic} style='width: 50%;'>`;
+twoWindow.innerHTML = `<button id="help"><p>Подсказка</p></button><img src=${srcPic} style='width: 50%;'>`;
 twoWindow.style.cssText = "display: flex; flex-direction: column; align-items: center; justify-content: center";
 }
 
 function update2WindowThree() {
-    threeWindow.innerHTML = `<h3>Для начала нажмите старт.</h3> 
+    threeWindow.innerHTML = `<h2>Для начала нажмите старт.</h2> 
     <button id="btn1"; style='background-color: yellow; border-radius: 0.5vw; width: 50%; height: 3vw;'>Start.</button> 
     <p>Для грузинской буквы выбираем русскую транскрипцию.</p>`;
-threeWindow.style.cssText = "display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1vw";
+    threeWindow.style.cssText = "display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1vw";
 }
 
 function updateWindowThree() {
-    threeWindow.innerHTML = `<h3>Для начала нажмите старт.</h3> 
-                        <button id="btn1"; style='background-color: green; border-radius: 0.5vw; width: 50%; height: 3vw;'>Start.</button> 
+    threeWindow.innerHTML = `<h2>Для начала нажмите старт.</h2> 
+                        <button id="btn1"; style='background-color: green; border-radius: 0.5vw; width: 50%; height: 3vw;'><p>Start.</p></button> 
                         <p>Для грузинской буквы выбираем русскую транскрипцию.</p>`;
     threeWindow.style.cssText = "display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1vw";
 }
@@ -285,7 +285,12 @@ function updateWindowFooter() {
     footerWindow.style.cssText = "display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1vw";
 }
 
-async function start() {
+function answer(str1) {
+    twoWindow.innerHTML = `${str1}`;
+    twoWindow.style.cssText = "display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1vw";
+}
+
+function start() {
     newLetter = randomLetter();
     srcPic = newLetter.picSrc;
     updateWindowTwo();
@@ -309,25 +314,27 @@ async function start() {
         btn.onclick = (() => {
             let ind = i;
             if (newLetter.num === ind) {
-                alert("Верно");
+                answer(`<h2>Верно.</h2>`);
                 ++numAll;
                 ++numTrue;
                 numRes = numTrue / numAll * 100;
                 updateWindowOne();
-                start();
-              
+                setTimeout(() => start(), 1000);
             } else {
-                alert("Неверно");
+                answer(`<h2>Неверно.</h2><h2>Правильный ответ</h2><h1 style="color: red;">${newLetter.transcription + " " + newLetter.description}</h1>`);
                 ++numAll;
                 ++numFalse;
                 numRes = numTrue / numAll * 100;
                 updateWindowOne();
+                setTimeout(() => start(), 1000);
             }
         });
         let btnHelp = document.querySelector("#help");
-        btnHelp.onclick = () => alert(newLetter.transcription + " " + newLetter.description);
+        btnHelp.onclick = (() => {
+            answer(`<h1>${newLetter.transcription} ${newLetter.description}</h1>`);
+            setTimeout(() => updateWindowTwo(), 1000);
+        });
     }
-
 }
 
 updateWindowOne();
@@ -347,12 +354,4 @@ btnStart.onclick = () => start();
 
 
 
-
-// console.log(randomLetter());
-// console.log(randomLetter());
-// console.log(randomLetter());
-// console.log(randomLetter());
-// console.log(randomLetter());
-// //console.log(arrAlphabet);
-// //console.dir(twoWindow);
 
