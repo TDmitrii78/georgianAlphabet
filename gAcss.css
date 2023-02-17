@@ -108,7 +108,7 @@
     .greedContainer {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 10vw 30vw 30vw 30vw 5vw; 
+        grid-template-rows: 10vw 30vw 70vw 30vw 5vw; 
         grid-template-areas:
             "header"
             "main1" 
