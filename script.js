@@ -317,14 +317,14 @@ function start() {
                 answer(`<h2>Верно.</h2>`);
                 ++numAll;
                 ++numTrue;
-                numRes = numTrue / numAll * 100;
+                numRes = Math.trunc(numTrue / numAll * 100);
                 updateWindowOne();
                 setTimeout(() => start(), 1000);
             } else {
                 answer(`<h2>Неверно.</h2><h2>Правильный ответ</h2><h1 style="color: red;">${newLetter.transcription + " " + newLetter.description}</h1>`);
                 ++numAll;
                 ++numFalse;
-                numRes = numTrue / numAll * 100;
+                numRes = Math.trunc(numTrue / numAll * 100);
                 updateWindowOne();
                 setTimeout(() => start(), 1000);
             }
