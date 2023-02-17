@@ -108,7 +108,7 @@
     .greedContainer {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 10vw 30vw 70vw 30vw 5vw; 
+        grid-template-rows: 10vw 30vw 70vw 40vw 5vw; 
         grid-template-areas:
             "header"
             "main1" 
@@ -166,7 +166,7 @@
     }
     .keyboard {
         width: 10vw;
-        height: 1.5vw;
+        height: 10vw;
         font-size: 1vw;
     }
 }
