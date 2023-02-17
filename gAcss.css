@@ -3,82 +3,170 @@
     margin: 0;
     padding: 0;
 }
-body {
-    padding: 0.5vw;
-    background-color: silver;
-    font-family: 'Roboto', sans-serif;
+
+@media (min-width: 901px) {
+
+    body {
+        padding: 0.5vw;
+        background-color: silver;
+        font-family: 'Roboto', sans-serif;
+    }
+    p {
+        font-size: 1.17vw;
+    }
+    h1 {
+        font-size: 2vw;
+    }
+    h2 {
+        font-size: 1.7vw;
+    }
+    h4 {
+        font-size: 1.17vw;
+    }
+    .greedContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 10vw 30vw 9vw; 
+        grid-template-areas:
+            "header header header"
+            "main1 main2 main3"
+            "footer footer footer";
+        gap: 1vw;
+    }
+    .item1 {
+        grid-area: header;
+        background-image: url(pictures/top.jpg);
+        background-size: cover;
+        text-align: center;
+        border-radius: 1.5vw;
+        box-shadow: 0.5vw 0.5vw 0.5vw black;
+        border: 0.5vw solid blue;
+    }
+    .item2 {
+        grid-area: main1;
+        background-color: grey;
+        border-radius: 1.5vw;
+        box-shadow: 0.5vw 0.5vw 0.5vw black;
+        border: 0.5vw solid blue;
+    }
+    .item3 {
+        grid-area: main2;
+        background-color: gray;
+        border-radius: 1.5vw;
+        box-shadow: 0.5vw 0.5vw 0.5vw black;
+        border: 0.5vw solid blue;
+    }
+    .item4 {
+        padding: 2vw;
+        grid-area: main3;
+        background-color: gray;
+        border-radius: 1.5vw;
+        box-shadow: 0.5vw 0.5vw 0.5vw black;
+        border: 0.5vw solid blue;
+    }
+    .item5 {
+        grid-area: footer;
+        background-color: gray;
+        border-radius: 1.5vw;
+        box-shadow: 0.5vw 0.5vw 0.5vw black;
+        border: 0.5vw solid blue;
+    }
+    .topText {
+        background-color: gray;
+        display: inline-block;
+        border-radius: 1.83vw;
+        padding: 1.2vw;
+        box-shadow: 0.5vw 0.5vw 0.5vw black;
+        border: 0.5vw solid blue;
+        
+    }
+    .keyboard {
+        width: 10vw;
+        height: 1.5vw;
+        font-size: 1vw;
+    }
 }
-p {
-    font-size: 1.17vw;
-}
-h1 {
-    font-size: 2vw;
-}
-h2 {
-    font-size: 1.7vw;
-}
-h4 {
-    font-size: 1.17vw;
-}
-.greedContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 10vw 30vw 9vw; 
-    grid-template-areas:
-        "header header header"
-        "main1 main2 main3"
-        "footer footer footer";
-    gap: 1vw;
-}
-.item1 {
-    grid-area: header;
-    background-image: url(pictures/top.jpg);
-    background-size: cover;
-    text-align: center;
-    border-radius: 1.5vw;
-    box-shadow: 0.5vw 0.5vw 0.5vw black;
-    border: 0.5vw solid blue;
-}
-.item2 {
-    grid-area: main1;
-    background-color: grey;
-    border-radius: 1.5vw;
-    box-shadow: 0.5vw 0.5vw 0.5vw black;
-    border: 0.5vw solid blue;
-}
-.item3 {
-    grid-area: main2;
-    background-color: gray;
-    border-radius: 1.5vw;
-    box-shadow: 0.5vw 0.5vw 0.5vw black;
-    border: 0.5vw solid blue;
-}
-.item4 {
-    padding: 2vw;
-    grid-area: main3;
-    background-color: gray;
-    border-radius: 1.5vw;
-    box-shadow: 0.5vw 0.5vw 0.5vw black;
-    border: 0.5vw solid blue;
-}
-.item5 {
-    grid-area: footer;
-    background-color: gray;
-    border-radius: 1.5vw;
-    box-shadow: 0.5vw 0.5vw 0.5vw black;
-    border: 0.5vw solid blue;
-}
-.topText {
-    background-color: gray;
-    display: inline-block;
-    border-radius: 1.83vw;
-    padding: 1.2vw;
-    box-shadow: 0.5vw 0.5vw 0.5vw black;
-    border: 0.5vw solid blue;
-    
-}
-.keyboard {
-    width: 10vw;
-    height: 1.5vw;
-    font-size: 1vw;
+
+@media (max-width: 900px) {
+    body {
+        padding: 0.5vw;
+        background-color: silver;
+        font-family: 'Roboto', sans-serif;
+    }
+    p {
+        font-size: 1.17vw;
+    }
+    h1 {
+        font-size: 2vw;
+    }
+    h2 {
+        font-size: 1.7vw;
+    }
+    h4 {
+        font-size: 1.17vw;
+    }
+    .greedContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10vw 30vw 30vw 30vw 5vw; 
+        grid-template-areas:
+            "header"
+            "main1" 
+            "main2"
+            "main3"
+            "footer";
+        gap: 1vw;
+    }
+    .item1 {
+        grid-area: header;
+        background-image: url(pictures/top.jpg);
+        background-size: cover;
+        text-align: center;
+        border-radius: 1.5vw;
+        box-shadow: 0.5vw 0.5vw 0.5vw black;
+        border: 0.5vw solid blue;
+    }
+    .item2 {
+        grid-area: main1;
+        background-color: grey;
+        border-radius: 1.5vw;
+        box-shadow: 0.5vw 0.5vw 0.5vw black;
+        border: 0.5vw solid blue;
+    }
+    .item3 {
+        grid-area: main2;
+        background-color: gray;
+        border-radius: 1.5vw;
+        box-shadow: 0.5vw 0.5vw 0.5vw black;
+        border: 0.5vw solid blue;
+    }
+    .item4 {
+        padding: 2vw;
+        grid-area: main3;
+        background-color: gray;
+        border-radius: 1.5vw;
+        box-shadow: 0.5vw 0.5vw 0.5vw black;
+        border: 0.5vw solid blue;
+    }
+    .item5 {
+        grid-area: footer;
+        background-color: gray;
+        border-radius: 1.5vw;
+        box-shadow: 0.5vw 0.5vw 0.5vw black;
+        border: 0.5vw solid blue;
+    }
+    .topText {
+        background-color: gray;
+        display: inline-block;
+        border-radius: 1.83vw;
+        padding: 1.2vw;
+        box-shadow: 0.5vw 0.5vw 0.5vw black;
+        border: 0.5vw solid blue;
+        
+    }
+    .keyboard {
+        width: 10vw;
+        height: 1.5vw;
+        font-size: 1vw;
+    }
 }
