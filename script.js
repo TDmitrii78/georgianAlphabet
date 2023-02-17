@@ -325,7 +325,7 @@ async function start() {
             }
         });
         let btnHelp = document.querySelector("#help");
-        btnHelp.onclick = () => alert(newLetter.transcription);
+        btnHelp.onclick = () => alert(newLetter.transcription + " " + newLetter.description);
     }
 
 }
