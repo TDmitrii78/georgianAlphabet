@@ -366,7 +366,7 @@ updateWindowFooter();  // Заполняем футер
 const btnAlphabet = document.querySelector("#help");  // Получаем доступ к кнопке "подсказка" на начальном экране
 btnAlphabet.onclick = () => {   // При нажатии кнопки запускается функция
     const img = document.querySelector("#imgAlph");  // Получаем доступ к картинке Алфавит
-    img.style.cssText ="position: absolute; height: 100%";  // Для увеличения картинки меняем стили
+    img.style.cssText ="position: absolute; height: 90%";  // Для увеличения картинки меняем стили
     img.onclick = () => {   // Функция запускается при нажатии на картинку
         img.style.cssText ="position: static; width: 50%;";  // Стили возвращаются в прежнее состояние и картинка тоже
     }
