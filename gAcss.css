@@ -18,10 +18,13 @@
         font-size: 2vw;
     }
     h2 {
-        font-size: 1.7vw;
+        font-size: 1.5vw;
     }
     h4 {
         font-size: 1.17vw;
+    }
+    .headerText2 {
+        font-size: 1.9vw;
     }
     .greedContainer {
         display: grid;
@@ -37,25 +40,37 @@
         grid-area: header;
         background-image: url(pictures/top.jpg);
         background-size: cover;
-        text-align: center;
         border-radius: 1.5vw;
         box-shadow: 0.5vw 0.5vw 0.5vw black;
         border: 0.5vw solid blue;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center; 
+    }
+    .bolt1 {
+        width: 7vw;
+        height: 7vw;
+    }
+    .bolt2 {
+        width: 7vw;
+        height: 7vw;
     }
     .item2 {
         grid-area: main1;
-        background-color: grey;
+        background-image: linear-gradient(grey, blue);
         border-radius: 1.5vw;
         box-shadow: 0.5vw 0.5vw 0.5vw black;
         border: 0.5vw solid blue;
-        display: flex; flex-direction: column; 
+        display: flex; 
+        flex-direction: column; 
         align-items: center; 
         justify-content: center; 
         gap: 1vw
     }
     .item3 {
         grid-area: main2;
-        background-color: gray;
+        background-image: linear-gradient(grey, blue);
         border-radius: 1.5vw;
         box-shadow: 0.5vw 0.5vw 0.5vw black;
         border: 0.5vw solid blue;
@@ -63,7 +78,7 @@
     .item4 {
         padding: 2vw;
         grid-area: main3;
-        background-color: gray;
+        background-image: linear-gradient(grey, blue);
         border-radius: 1.5vw;
         box-shadow: 0.5vw 0.5vw 0.5vw black;
         border: 0.5vw solid blue;
@@ -74,15 +89,19 @@
         border-radius: 1.5vw;
         box-shadow: 0.5vw 0.5vw 0.5vw black;
         border: 0.5vw solid blue;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center; 
     }
     .topText {
         background-color: gray;
+        text-align: center;
         display: inline-block;
         border-radius: 1.83vw;
         padding: 1.2vw;
         box-shadow: 0.5vw 0.5vw 0.5vw black;
         border: 0.5vw solid blue;
-        
     }
     .keyboard {
         width: 9vw;
@@ -100,7 +119,24 @@
         border-radius: 0.5vw; 
         width: 50%; height: 3vw;
     }
+    .trueAnswer {
+        font-size: 7vw; 
+        color: green
+    }
+    .helpText {
+        font-size: 7vw;
+    }
+    .falseText1 {
+        font-size: 5vw; 
+        color: red;
+    }
+    .falseText2 {
+        color: red; 
+        font-size: 7vw;
+    }
 }
+
+
 
 @media (max-width: 900px) {
     body {
@@ -123,7 +159,7 @@
     .greedContainer {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 13vw 15vw 70vw 80vw 5vw; 
+        grid-template-rows: 13vw 15vw 70vw 80vw 13vw; 
         grid-template-areas:
             "header"
             "main1" 
@@ -140,6 +176,18 @@
         border-radius: 1.5vw;
         box-shadow: 0.5vw 0.5vw 0.5vw black;
         border: 0.5vw solid blue;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center; 
+    }
+    .bolt1 {
+        width: 7vw;
+        height: 7vw;
+    }
+    .bolt2 {
+        width: 7vw;
+        height: 7vw;
     }
     .item2 {
         grid-area: main1;
@@ -154,7 +202,7 @@
     }
     .item3 {
         grid-area: main2;
-        background-color: gray;
+        background-image: linear-gradient(grey, blue);
         border-radius: 1.5vw;
         box-shadow: 0.5vw 0.5vw 0.5vw black;
         border: 0.5vw solid blue;
@@ -162,7 +210,7 @@
     .item4 {
         padding: 2vw;
         grid-area: main3;
-        background-color: gray;
+        background-image: linear-gradient(blue, gray);
         border-radius: 1.5vw;
         box-shadow: 0.5vw 0.5vw 0.5vw black;
         border: 0.5vw solid blue;
@@ -173,6 +221,10 @@
         border-radius: 1.5vw;
         box-shadow: 0.5vw 0.5vw 0.5vw black;
         border: 0.5vw solid blue;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center; 
     }
     .topText {
         background-color: gray;
@@ -198,6 +250,20 @@
         background-color: green; 
         border-radius: 0.5vw; 
         width: 50%; height: 10vw;
+    } 
+    .trueAnswer {
+        font-size: 20vw; 
+        color: green
     }
-    
+    .helpText {
+        font-size: 20vw;
+    } 
+    .falseText1 {
+        font-size: 15vw; 
+        color: red;
+    }
+    .falseText2 {
+        color: red; 
+        font-size: 17vw;
+    }
 }
