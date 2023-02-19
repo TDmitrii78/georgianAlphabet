@@ -134,6 +134,14 @@
         color: red; 
         font-size: 7vw;
     }
+    .fotoAlphabet {
+        position: absolute;
+        height: 90%;
+        width: 65%;
+    }
+    .imgAlp {
+        width: 50%;
+    }
 }
 
 
@@ -266,4 +274,14 @@
         color: red; 
         font-size: 17vw;
     }
+
+    .fotoAlphabet {
+        position: absolute;
+        height: 90%;
+        width: 90%;
+    }
+    .imgAlp {
+        width: 50%;
+    }
+
 }
