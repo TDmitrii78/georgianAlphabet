@@ -277,6 +277,7 @@
 
     .fotoAlphabet {
         position: absolute;
+        top: 0px;
         height: 90%;
         width: 90%;
     }
